@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: fbctest
+  namespace: user1-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/scoheb/user-workload@sha256:84a082dd9feafb7253157b201a352195ebd258f9079bcdec8cf56b46e7159160
+        name: container-image
+        resources: {}
+status: {}
